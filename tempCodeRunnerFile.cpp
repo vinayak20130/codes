@@ -1,28 +1,21 @@
 #include<iostream>
 using namespace std;
-int one(int n){
-    int count=0;
-    while(n!=0){
-        
-        if (n&1)
-        {
-            count++;
-        }
-        n=n>>1;
-        
-    }
-     return count;
-}
-    int main()
+int main()
+{
+    int i, j, rowNum, space;
+    cout<<"Enter the Number of Rows: ";
+    cin>>rowNum;
+    space = rowNum-1;
+    for(i=1; i<=rowNum; i++)
     {
-        int a;
-        int b;
-        cin>>a>>b;
-        int ans1=one(a);
-        int ans2=one(b);
-        cout<<ans1+ans2<<endl;
-        return 0;
-        
+        for(j=1; j<=space; j++)
+            cout<<" ";
+        space--;
+        for(j=1; j<=(2*i-1); j++)
+            cout<<"*";
+        cout<<endl;
     }
     
-
+    cout<<endl;
+    return 0;
+}
